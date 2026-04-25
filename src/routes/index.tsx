@@ -56,8 +56,8 @@ function HomePage() {
 
       {/* Background effects — fixed behind all content */}
       <div aria-hidden="true" className="fixed inset-0 z-0">
-        <ShootingStars />
         <StarsBackground />
+        {/* <ShootingStars /> */}
       </div>
     </>
   );

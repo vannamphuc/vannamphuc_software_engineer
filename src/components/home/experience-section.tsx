@@ -8,7 +8,7 @@ const reveal: Variants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.65, ease: "easeOut" },
+    transition: { duration: 0.42, ease: "easeOut" },
   },
 };
 

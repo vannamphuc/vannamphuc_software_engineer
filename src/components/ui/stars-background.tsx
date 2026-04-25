@@ -20,8 +20,8 @@ interface StarsBackgroundProps {
 }
 
 export function StarsBackground({
-  starDensity = 0.00015,
-  allStarsTwinkle = true,
+  starDensity = 0.00006,
+  allStarsTwinkle = false,
   twinkleProbability = 0.7,
   minTwinkleSpeed = 0.5,
   maxTwinkleSpeed = 1,

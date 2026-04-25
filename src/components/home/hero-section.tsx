@@ -5,7 +5,7 @@ import { PERSONAL } from "@/lib/data/portfolio";
 /** Stagger container — children animate sequentially */
 const stagger: Variants = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.15 } },
+  visible: { transition: { staggerChildren: 0.08 } },
 };
 
 /** Shared reveal: fade-in + slide-up */
@@ -14,7 +14,7 @@ const fadeUp: Variants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: "easeOut" },
+    transition: { duration: 0.42, ease: "easeOut" },
   },
 };
 
@@ -23,7 +23,7 @@ const lineExpand: Variants = {
   hidden: { scaleX: 0 },
   visible: {
     scaleX: 1,
-    transition: { duration: 0.8, ease: "easeInOut" },
+    transition: { duration: 0.45, ease: "easeInOut" },
   },
 };
 
@@ -80,7 +80,7 @@ export function HeroSection() {
         aria-label="Scroll to content"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
+        transition={{ delay: 0.35, duration: 0.35 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 cursor-pointer"
       >
         <div className="relative flex flex-col items-center">
@@ -89,7 +89,7 @@ export function HeroSection() {
             {/* Scroll dot */}
             <motion.span
               animate={{ y: [0, -3, 0] }}
-              transition={{ duration: 0.8, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ duration: 0.55, repeat: Infinity, ease: "easeInOut" }}
               className="absolute top-2 left-1/2 block h-2.5 w-[3px] -translate-x-1/2 rounded-full bg-foreground"
             />
           </span>
