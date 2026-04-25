@@ -24,29 +24,25 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
   // },
   head: () => ({
     meta: [
-      {
-        charSet: "utf-8",
-      },
-      {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1",
-      },
-      {
-        title: "vannamphuc_software_engineer",
-      },
+      { charSet: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { title: "Van Nam Phuc — Software Engineer" },
       {
         name: "description",
-        content: "A TanStack Start project scaffolded with create-mugnavo.",
+        content:
+          "Portfolio of Van Nam Phuc — Software Engineer specialising in React, TypeScript, and full-stack web development.",
       },
-    ],
-    links: [
-      // Replace with your icons here, or remove if you have a favicon.ico in public/
+      { name: "author", content: "Van Nam Phuc" },
+      { property: "og:title", content: "Van Nam Phuc — Software Engineer" },
       {
-        rel: "icon",
-        href: "https://mugnavo.com/favicon.ico",
+        property: "og:description",
+        content:
+          "Portfolio of Van Nam Phuc — Software Engineer specialising in React, TypeScript, and full-stack web development.",
       },
-      { rel: "stylesheet", href: appCss },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "stylesheet", href: appCss }],
   }),
   shellComponent: RootDocument,
 });
