@@ -1,5 +1,6 @@
 import { SiGithub, SiGmail, SiInspire } from "@icons-pack/react-simple-icons";
 
+import { trackSocialClick } from "@/lib/analytics";
 import { SOCIALS } from "@/lib/data/portfolio";
 import { cn } from "@/lib/utils";
 
@@ -21,6 +22,7 @@ export function SocialDock() {
           <a
             key={social.platform}
             href={social.url}
+            onClick={() => trackSocialClick(social.platform)}
             target={social.platform === "email" ? undefined : "_blank"}
             rel={social.platform === "email" ? undefined : "noopener noreferrer"}
             aria-label={social.platform}

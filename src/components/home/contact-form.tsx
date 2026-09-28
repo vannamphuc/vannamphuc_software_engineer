@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { trackContactEvent } from "@/lib/analytics";
 
 function Field({
   label,
@@ -44,6 +45,7 @@ export function ContactForm() {
         throw new Error("Failed to send form");
       }
 
+      trackContactEvent("form_submit");
       toast.success("Thanks for reaching out. I will reply soon.");
       form.reset();
     } catch {
