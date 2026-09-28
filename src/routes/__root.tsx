@@ -43,6 +43,20 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "stylesheet", href: appCss }],
+    scripts: [
+      {
+        src: "https://www.googletagmanager.com/gtag/js?id=G-T9ZP216FBG",
+        async: true,
+      },
+      {
+        children: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-T9ZP216FBG');
+        `,
+      },
+    ],
   }),
   shellComponent: RootDocument,
 });
