@@ -6,7 +6,6 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { CometCard } from "@/components/ui/comet-card";
 import { env } from "@/env/client";
-import { trackProjectClick } from "@/lib/analytics";
 import type { ProjectEntry } from "@/lib/data/portfolio";
 
 interface ProjectCardProps {
@@ -87,7 +86,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <a
               key={repo}
               href={repo}
-              onClick={() => trackProjectClick(project.title, "view_repo")}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
@@ -101,7 +99,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
           {project.liveUrl ? (
             <a
               href={project.liveUrl}
-              onClick={() => trackProjectClick(project.title, "view_demo")}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-medium text-highlight hover:underline"
